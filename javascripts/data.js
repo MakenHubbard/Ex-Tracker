@@ -1,8 +1,10 @@
 const loadEx = require('./ex');
 const loadLocations = require('./locations');
+const exDomString = require('./exDom');
 
 const whenExLoads = (data) => {
   console.log('data', data);
+  $('.exCard').append(exDomString(data.myEx));
 };
 
 const whenLocationsLoad = (data) => {

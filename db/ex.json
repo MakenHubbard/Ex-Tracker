@@ -1,8 +1,8 @@
 {
-	"My-Ex": [{
-		"image": "http://dailybuzzlive.com/wp-content/uploads/Old-people.jpg",
-		"Name": "Ethel",
-		"Age": "73",
-		"Flaws": "Always needing help up the stairs, Her teeth keep falling out at the worst times, NO SEX DRIVE!!!, Passes gas in her sleep, Social Security is running out"
-	}]
+	"myEx": {
+		"image": "https://i.imgur.com/Yw9iFMk.jpg",
+		"name": "Ethel",
+		"age": "73",
+		"flaws": "Always needing help up the stairs, Her teeth keep falling out at the worst times, NO SEX DRIVE!!!, Passes gas in her sleep, Social Security is running out"
+	}
 }
