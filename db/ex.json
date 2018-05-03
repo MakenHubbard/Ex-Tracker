@@ -1,0 +1,27 @@
+{
+	"stakeouts": [{
+			"Location image": "https://i.pinimg.com/736x/3a/5e/71/3a5e7107e494931d5b63bf25097ddffd--gaumont-west-midlands.jpg",
+			"Name of Location": "Earl's Bingo Alley",
+			"Location Address": "4567 MainStain Street Farley, CO 43875",
+			"Visiting Hours": "Evening"
+		},
+		{
+			"Location image": "http://ak1.picdn.net/shutterstock/videos/13596221/thumb/1.jpg",
+			"Name of Location": "Hot Slots and Pretzel Knots Casino",
+			"Location Address": "4985 Happy Trail Rhinomere, HT 54367",
+			"Visiting Hours": "After Dark"
+		},
+		{
+			"Location image": "https://wtop.com/wp-content/uploads/2013/02/277647.jpg",
+			"Name of Location": "The Lost Years Quilting Arena",
+			"Location Address": "19946 Dresden Rd Detroit, MI 48219",
+			"Visiting Hours": "Morning"
+		},
+		{
+			"Location image": "http://www.cityoflakewales.com/ImageRepository/Path?filePath=%2Fdocuments%5CIntranet%5C72%5C76%2FCrystal+Lake+Park+Shuffleboard+Courts_201503111011059626.jpg",
+			"Name of Location": "Twist and Shout Shuffle Board Court",
+			"Location Address": "45637 East Street Lakeland, FL 46373",
+			"Visiting Hours": "Afternoon"
+		}
+	]
+}
