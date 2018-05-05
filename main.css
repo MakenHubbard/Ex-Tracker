@@ -1,3 +1,25 @@
 body {
   background-color: blue;
+  color: white;
+  text-align: center;
+  font-family: 'Skranji', cursive;
+  background: url(https://images.unsplash.com/photo-1460602594182-8568137446ce?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c6a89cf0d31c8ed23b35aaf9a119a9f5&w=1000&q=80);
+  background-position: 100px 0;
+}
+
+h1,
+h2 {
+  color: lightseagreen;
+}
+
+p {
+  font-size: 16px;
+}
+
+.exes {
+  padding-top: 25px;
+}
+
+.locates {
+  margin-top: 37px;
 }
