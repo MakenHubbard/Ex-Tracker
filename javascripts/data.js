@@ -2,13 +2,17 @@ const loadEx = require('./ex');
 const loadLocations = require('./locations');
 const exDomString = require('./exDom');
 
+let ex = {};
+
 const whenExLoads = (data) => {
   console.log('data', data);
-  $('.exCard').append(exDomString(data.myEx));
+  ex = data.myEx;
+  loadLocations(whenLocationsLoad, whenStuffFails);
 };
 
 const whenLocationsLoad = (data) => {
   console.log('data', data);
+  $('.exCard').append(exDomString(ex,data.stakeouts));
 };
 
 const whenStuffFails = (error) => {
@@ -16,7 +20,6 @@ const whenStuffFails = (error) => {
 };
 const initializer = () => {
   loadEx(whenExLoads, whenStuffFails);
-  loadLocations(whenLocationsLoad, whenStuffFails);
 };
 
 module.exports = initializer;
