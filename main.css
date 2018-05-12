@@ -7,6 +7,24 @@ body {
   background-position: 100px 0;
 }
 
+.searchy {
+  float: right;
+}
+
+.morning-butt {
+  float: left;
+}
+
+.evening-butt {
+  float:right;
+}
+
+.times {
+  margin-top: 50px;
+  align-self: center;
+  align-items: center;
+}
+
 h1,
 h2 {
   color: lightseagreen;
@@ -17,7 +35,7 @@ p {
 }
 
 .exes {
-  padding-top: 25px;
+  padding-top: 75px;
 }
 
 .locates {

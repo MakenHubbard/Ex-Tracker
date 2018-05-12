@@ -3,6 +3,7 @@ const loadLocations = require('./locations');
 const exDomString = require('./exDom');
 
 let ex = {};
+let locations = [];
 
 const whenExLoads = (data) => {
   console.log('data', data);
@@ -10,9 +11,25 @@ const whenExLoads = (data) => {
   loadLocations(whenLocationsLoad, whenStuffFails);
 };
 
+const getLocations = () => {
+  return locations;
+};
+
+const getEx = () => {
+  return ex;
+};
+
+const getUserInput = () => {
+  // const userInput = $('#subby').val();
+};
+
+const setUserInput = (userInput) => {
+  $('#subby').val(userInput);
+};
+
 const whenLocationsLoad = (data) => {
-  console.log('data', data);
-  $('.exCard').append(exDomString(ex,data.stakeouts));
+  locations = data.stakeouts;
+  $('.exCard').append(exDomString(ex, locations));
 };
 
 const whenStuffFails = (error) => {
@@ -22,4 +39,10 @@ const initializer = () => {
   loadEx(whenExLoads, whenStuffFails);
 };
 
-module.exports = initializer;
+module.exports = {
+  initializer,
+  getLocations,
+  getEx,
+  getUserInput,
+  setUserInput,
+};

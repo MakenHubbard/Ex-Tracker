@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,40 @@
   <title>Ex-Tracker</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
     crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Skranji" rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Skranji" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
 </head>
+
 <body class="container">
+  <div class="the-top-stuff">
+    <div class="searchy">
+      <div class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input id="userInput" type="text" class="form-control" placeholder="Search">
+        </div>
+        <button id="subby" class="btn btn-default">Submit</button>
+      </div>
+    </div>
+    <div class="morning-butt">
+      <button type="button" class="btn btn-primary times">Morning</button>
+    </div>
+    <div class="afternoon=butt">
+      <button type="button" class="btn btn-success times">Afternoon</button>
+    </div>
+    <div class="evening-butt">
+      <button type="button" class="btn btn-warning times">Evening</button>
+    </div>
+    <div class="AfterDark-butt">
+      <button type="button" class="btn btn-danger times">After Dark</button>
+    </div>
+  </div>
   <div class="exCard"></div>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
     crossorigin="anonymous"></script>
-    <script src="./dist/app.js"></script>
+  <script src="./dist/app.js"></script>
 </body>
+
 </html>
