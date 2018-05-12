@@ -7,7 +7,7 @@ const exDomString = (myEx, stakeouts) => {
   domString += `<img src="${myEx.image} alt="" width="240px" height="240px">"`;
   domString += `<h1>${myEx.name}</h1>`;
   domString += `<p>${myEx.age}</p>`;
-  domString += `<p><b>Reasons why she is my ex:</b>${myEx.flaws}</p>`;
+  domString += `<p><b>Reasons why she is my ex: </b>${myEx.flaws}</p>`;
   domString += `</div>`;
 
   stakeouts.forEach((stakeout) => {

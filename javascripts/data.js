@@ -19,6 +19,14 @@ const getEx = () => {
   return ex;
 };
 
+const getUserInput = () => {
+  // const userInput = $('#subby').val();
+};
+
+const setUserInput = (userInput) => {
+  $('#subby').val(userInput);
+};
+
 const whenLocationsLoad = (data) => {
   locations = data.stakeouts;
   $('.exCard').append(exDomString(ex, locations));
@@ -35,4 +43,6 @@ module.exports = {
   initializer,
   getLocations,
   getEx,
+  getUserInput,
+  setUserInput,
 };
