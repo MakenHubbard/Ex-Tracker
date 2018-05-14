@@ -1,7 +1,6 @@
 // Dom string function
 
 const exDomString = (myEx, stakeouts) => {
-  console.log(myEx);
   let domString = '';
   domString += `<div class="exes text-center">`;
   domString += `<img src="${myEx.image} alt="" width="240px" height="240px">"`;
