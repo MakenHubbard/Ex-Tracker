@@ -1,53 +1,62 @@
 {
 	"stakeouts": [{
+			"locationId": 1,
 			"locationImage": "https://i.pinimg.com/736x/3a/5e/71/3a5e7107e494931d5b63bf25097ddffd--gaumont-west-midlands.jpg",
 			"nameOfLocation": "Earl's Bingo Alley",
 			"locationAddress": "4567 MainStain Street Farley, CO 43875",
 			"visitingHours": "Evening"
 		},
 		{
+			"locationId": 2,
 			"locationImage": "http://ak1.picdn.net/shutterstock/videos/13596221/thumb/1.jpg",
 			"nameOfLocation": "Hot Slots and Pretzel Knots Casino",
 			"locationAddress": "4985 Happy Trail Rhinomere, HT 54367",
 			"visitingHours": "After Dark"
 		},
 		{
+			"locationId": 3,
 			"locationImage": "https://wtop.com/wp-content/uploads/2013/02/277647.jpg",
 			"nameOfLocation": "The Lost Years Quilting Arena",
 			"locationAddress": "19946 Dresden Rd Detroit, MI 48219",
 			"visitingHours": "Morning"
 		},
 		{
+			"locationId": 4,
 			"locationImage": "http://www.cityoflakewales.com/ImageRepository/Path?filePath=%2Fdocuments%5CIntranet%5C72%5C76%2FCrystal+Lake+Park+Shuffleboard+Courts_201503111011059626.jpg",
 			"nameOfLocation": "Twist and Shout Shuffle Board Court",
 			"locationAddress": "45637 East Street Lakeland, FL 46373",
 			"visitingHours": "Afternoon"
 		},
 		{
+			"locationId": 5,
 			"locationImage": "https://i0.wp.com/blackyouthproject.com/wp-content/uploads/2017/07/2chainz-pink-trap-house.jpg?fit=1280%2C720",
 			"nameOfLocation": "Da Trap House",
 			"locationAddress": "45 Downs blvd Cincinnati, OH 654321",
 			"visitingHours": "After Dark"
 		},
 		{
+			"locationId": 6,
 			"locationImage": "http://wp.patheos.com.s3.amazonaws.com/blogs/ellenpainterdollar/files/2012/02/2119243827.jpg",
 			"nameOfLocation": "Any Denny's handicap parking spot",
 			"locationAddress": "Usually the spot closest to the front door",
 			"visitingHours": "Morning"
 		},
 		{
+			"locationId": 7,
 			"locationImage": "https://archpaper.com/wp-content/uploads/2018/01/longaburger-basketbuilding-copy.png",
 			"nameOfLocation": "Social Security Office",
 			"locationAddress": "1595 North Southeast Avenue Rubber City, VA 75329",
 			"visitingHours": "Evening"
 		},
 		{
+			"locationId": 7,
 			"locationImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8OZcM1Ip_qbGnvtFpylFffcgobsyZU_VQcb9QtdkYgG1miygcag",
 			"nameOfLocation": "Garage Sales",
 			"locationAddress": "Any Community having a Garage Sale",
 			"visitingHours": "Afternoon"
 		},
 		{
+			"locationId": 8,
 			"locationImage": "https://i.pinimg.com/236x/c5/9b/be/c59bbe9ccc9a12471925a46fc588b649--funny-memes-jokes.jpg",
 			"nameOfLocation": "The Hover Round Dealership",
 			"locationAddress": " 2355 Long Distance Rd HoverVilleTownChester Round, WA 68425 ",
