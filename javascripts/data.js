@@ -2,37 +2,33 @@ const loadEx = require('./ex');
 const loadLocations = require('./locations');
 const exDomString = require('./exDom');
 
-let ex = {};
-let locations = [];
+// const getAllPups = () => {
+//   let dogos = [];
+//   return firstPupJSON()
+//     .then((result) => {
+//       dogos = [...result,];
+//       return secondPupJSON();
 
-const whenExLoads = (data) => {
-  console.log('data', data);
-  ex = data.myEx;
-  loadLocations(whenLocationsLoad, whenStuffFails);
+const bothData = () => {
+  let exes = [];
+  let locals = [];
+  // let excations = [];
+  return loadLocations()
+    .then((result) => {
+      console.error(result);
+      locals = [...result,];
+      return loadEx()
+        .then((result2) => {
+          exes = [...result2,];
+          exDomString(exes, locals);
+        });
+    });
 };
 
-const getLocations = () => {
-  return locations;
-};
-
-const getEx = () => {
-  return ex;
-};
-
-const whenLocationsLoad = (data) => {
-  locations = data.stakeouts;
-  $('.exCard').append(exDomString(ex, locations));
-};
-
-const whenStuffFails = (error) => {
-  console.log('error', error);
-};
 const initializer = () => {
-  loadEx(whenExLoads, whenStuffFails);
+  bothData();
 };
 
 module.exports = {
   initializer,
-  getLocations,
-  getEx,
 };

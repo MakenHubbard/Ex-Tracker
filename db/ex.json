@@ -1,8 +1,38 @@
 {
-	"myEx": {
-		"image": "https://i.imgur.com/Yw9iFMk.jpg",
-		"name": "Ethel",
-		"age": "73",
-		"flaws": "Always needing help up the stairs, Her teeth keep falling out at the worst times, NO SEX DRIVE!!!, Passes gas in her sleep, Social Security is running out"
-	}
+	"myEx": [{
+			"image": "https://i.imgur.com/Yw9iFMk.jpg",
+			"name": "Ethel",
+			"age": "73",
+			"flaws": "Always needing help up the stairs, Her teeth keep falling out at the worst times, NO SEX DRIVE!!!, Passes gas in her sleep, Social Security is running out",
+			"locations": [1, 4, 7]
+		},
+		{
+			"image": "https://i.pinimg.com/originals/0f/5e/29/0f5e29d27e1ca738fb650c02fbbe95cf.jpg",
+			"name": "Gertrude",
+			"age": "86",
+			"flaws": "Ever since she broke her hip her mind hasn't been the same and she forgets me form time to time. I was bathing her and all of sudden she flipped out screaming RAPE!!!",
+			"locations": [2, 3, 5]
+		},
+		{
+			"image": "https://ih0.redbubble.net/image.276885228.3791/flat,1000x1000,075,f.u1.jpg",
+			"name": "Margaret",
+			"age": "69",
+			"flaws": "The home she is staying in limited the visiting hours on us after they caught us. So I just cut my losses.",
+			"locations": [3, 5, 7]
+		},
+		{
+			"image": "https://www.askideas.com/media/14/Old-Woman-Very-Funny-Face.jpg",
+			"name": "Ida",
+			"age": "83",
+			"flaws": "As soon as I came to really care about Ida, I realized that as everyday that goes by she looks more and more like a spud. So I started to call her Ida-ho (in reference to one of the state's cash crop) and she didn't like that so I dumped her for her lack of a sense of humor.",
+			"locations": [3, 4, 1]
+		},
+		{
+			"image": "https://i.imgur.com/Yw9iFMk.jpg",
+			"name": "Bertha",
+			"age": "97",
+			"flaws": "Bertha passed away at a ripe ole age of 97. Our love was something that dreams were made of and I miss her. I miss her so much that I still see her out and about.",
+			"locations": [4, 8, 7]
+		}
+	]
 }
