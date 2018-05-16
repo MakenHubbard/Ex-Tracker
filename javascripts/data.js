@@ -1,6 +1,6 @@
 const loadEx = require('./ex');
 const loadLocations = require('./locations');
-const exDomString = require('./exDom');
+const dom = require('./exDom');
 
 // const getAllPups = () => {
 //   let dogos = [];
@@ -17,10 +17,13 @@ const bothData = () => {
     .then((result) => {
       console.error(result);
       locals = [...result,];
+      dom.locationDomString(locals);
       return loadEx()
         .then((result2) => {
+          console.error(result2);
           exes = [...result2,];
-          exDomString(exes, locals);
+          dom.exDomString(exes);
+          return Promise.resolve(exes,locals);
         });
     });
 };
