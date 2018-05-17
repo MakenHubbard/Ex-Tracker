@@ -10,20 +10,20 @@ const dom = require('./exDom');
 //       return secondPupJSON();
 
 const bothData = () => {
-  let exes = [];
-  let locals = [];
+  // let exes = [];
+  // let locals = [];
   // let excations = [];
   return loadLocations()
-    .then((result) => {
-      console.error(result);
-      locals = [...result,];
+    .then((locals) => {
+      // console.error(result);
+      // locals = [...result,];
       dom.locationDomString(locals);
       return loadEx()
-        .then((result2) => {
-          console.error(result2);
-          exes = [...result2,];
+        .then((exes) => {
+          // console.error(result2);
+          // exes = [...result2,];
           dom.exDomString(exes);
-          return Promise.resolve(exes,locals);
+          // return Promise.resolve(exes,locals);
         });
     });
 };
