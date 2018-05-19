@@ -49,14 +49,14 @@
 			"visitingHours": "Evening"
 		},
 		{
-			"locationId": 7,
+			"locationId": 8,
 			"locationImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8OZcM1Ip_qbGnvtFpylFffcgobsyZU_VQcb9QtdkYgG1miygcag",
 			"nameOfLocation": "Garage Sales",
 			"locationAddress": "Any Community having a Garage Sale",
 			"visitingHours": "Afternoon"
 		},
 		{
-			"locationId": 8,
+			"locationId": 9,
 			"locationImage": "https://i.pinimg.com/236x/c5/9b/be/c59bbe9ccc9a12471925a46fc588b649--funny-memes-jokes.jpg",
 			"nameOfLocation": "The Hover Round Dealership",
 			"locationAddress": " 2355 Long Distance Rd HoverVilleTownChester Round, WA 68425 ",
