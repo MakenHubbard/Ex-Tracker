@@ -30,6 +30,10 @@ const locationDomString = (stakeouts) => {
   });
 };
 
+// const singleExDom = () => {
+//   oneExOutputDiv.html();
+// };
+
 const printExToDom = (exes) => {
   exOutputDiv.append(exes);
 };
