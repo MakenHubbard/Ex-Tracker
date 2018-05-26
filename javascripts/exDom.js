@@ -5,7 +5,7 @@ const locationOutputDiv = $('.locationCard');
 const exDomString = (myEx) => {
   myEx.forEach((ex) => {
     let domString = '';
-    domString += `<div class="exes text-center">`;
+    domString += `<div class="exes text-center" id="${ex.name}">`;
     domString += `<img src="${ex.image}" alt="" width="240px" height="240px">"`;
     domString += `<h1>${ex.name}</h1>`;
     domString += `<p>${ex.age}</p>`;
@@ -29,6 +29,12 @@ const locationDomString = (stakeouts) => {
     printLocationToDom(domStrang);
   });
 };
+
+// const printSingle = (myEx,stakeouts) => {
+//   for(let k = 0; k < myEx.length; k++) {
+//     if (e.target.)
+//   }
+// };
 
 // const singleExDom = () => {
 //   oneExOutputDiv.html();

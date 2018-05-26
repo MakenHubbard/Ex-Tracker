@@ -34,9 +34,16 @@ const displayTime = (time) => {
   $('.exCard').html(exDomString(data.getEx(), selectedLocate));
 };
 
+const clickEx = () => {
+  $(document).on('click', '.exes',(e) => {
+
+  });
+};
+
 const events = () => {
   $('body').on('click', '.times', whatTime);
   $('#subby').on('click', userInput);
+  clickEx();
 };
 
 module.exports = events;
