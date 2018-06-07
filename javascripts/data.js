@@ -24,7 +24,6 @@ const smashedData = () => {
         .then((exes) => {
           dom.exDomString(exes);
           const exPlusLocations = dataSmash(exes,locals);
-          console.error('what I need', exPlusLocations);
           return Promise.resolve(exPlusLocations);
         });
     });
@@ -45,6 +44,7 @@ const dataSmash = (exes, locals) => {
     };
     allData.push(finalEx);
   });
+  console.log(allData);
   return allData;
 };
 

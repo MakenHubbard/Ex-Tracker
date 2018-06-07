@@ -34,17 +34,25 @@ const displayTime = (time) => {
   $('.exCard').html(exDomString(data.getEx(), selectedLocate));
 };
 
-// const clickEx = () => {
-//   $(document).on('click', '.exes',(e) => {
-// if statement here
-//     // dom.printSingle();
-//   });
-// };
+const clickEx = () => {
+  $(document).on('click', '.exImg', (e) => {
+    data.smashedData()
+      .then((results) => {
+        for (let j = 0; j < results.length; j++) {
+          if (e.target.id === results[j].name) {
+            exDomString.printSingle();
+          }
+        };
+      });
+  });
+};
 
 const events = () => {
   $('body').on('click', '.times', whatTime);
   $('#subby').on('click', userInput);
-  // clickEx();
+  clickEx();
 };
 
-module.exports = events;
+module.exports = {
+  events,
+};

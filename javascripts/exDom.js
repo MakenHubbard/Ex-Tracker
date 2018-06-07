@@ -6,7 +6,7 @@ const exDomString = (myEx) => {
   myEx.forEach((ex) => {
     let domString = '';
     domString += `<div class="exes text-center" id="${ex.name}">`;
-    domString += `<img src="${ex.image}" alt="" width="240px" height="240px">`;
+    domString += `<img class="exImg" src="${ex.image}" alt="" width="240px" height="240px">`;
     domString += `<h1>${ex.name}</h1>`;
     domString += `<p>${ex.age}</p>`;
     domString += `<p><b>Reasons why she is my ex: </b>${ex.flaws}</p>`;
@@ -30,25 +30,30 @@ const locationDomString = (stakeouts) => {
   });
 };
 
-// const printSingle = (myEx, stakeouts) => {
-//     for (let k = 0; k < myEx.length; k++) {
-//       let singleString = '';
-//       singleString += `<div class="jumbotron">`;
-//       singleString += `<div class="row">`;
-//       singleString += `<div>`;
-//       singleString += `<img src="${myEx.image}" alt="" width="240px" height="240px">`;
-//       singleString += `<h1>${myEx.name}</h1>`;
-//       singleString += `<p>...</p>`;
-//       singleString += `<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>`;
-//       singleString += `</div>`;
-//       aingelString += `</div>`;
-//       singleString += `</div>`;
-//     }
-// };
+const printSingle = (myEx) => {
+  console.log(myEx);
+  let singleString = '';
+  for (let k = 0; k < myEx.length; k++) {
+    singleString += `<div class="jumbotron">`;
+    singleString += `<div class="row">`;
+    singleString += `<div class="text-center">`;
+    singleString += `<img  src="${myEx.image}" alt="" width="240px" height="240px">`;
+    singleString += `<h1>${myEx.name}</h1>`;
+    singleString += `<div col-sm-3 col-sm-offset-4>`;
+    singleString += `<p>${myEx.relatedLocations[0]}</p>`;
+    singleString += `<p>`;
+    singleString += `</div>`;
+    singleString += `<p><a id="singleBack-btn" class="btn btn-primary btn-lg" href="#" role="button">Go Back</a></p>`;
+    singleString += `</div>`;
+    singleString += `</div>`;
+    singleString += `</div>`;
+  }
+  singleExDom(singleString);
+};
 
-// const singleExDom = () => {
-//   oneExOutputDiv.html();
-// };
+const singleExDom = (singleString) => {
+  exOutputDiv.html(singleString);
+};
 
 const printExToDom = (exes) => {
   exOutputDiv.append(exes);
@@ -65,4 +70,5 @@ const printLocationToDom = (stakeout) => {
 module.exports = {
   exDomString,
   locationDomString,
+  printSingle,
 };
