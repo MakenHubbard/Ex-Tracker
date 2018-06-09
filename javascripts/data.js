@@ -11,7 +11,7 @@ const bothData = () => {
       return loadEx()
         .then((exes) => {
           dom.exDomString(exes);
-          return Promise.resolve(exes,locals);
+          return Promise.resolve(exes, locals);
         });
     });
 };
@@ -23,8 +23,7 @@ const smashedData = () => {
       return loadEx()
         .then((exes) => {
           dom.exDomString(exes);
-          const exPlusLocations = dataSmash(exes,locals);
-          console.error('what I need', exPlusLocations);
+          const exPlusLocations = dataSmash(exes, locals);
           return Promise.resolve(exPlusLocations);
         });
     });
@@ -55,4 +54,5 @@ const initializer = () => {
 module.exports = {
   initializer,
   smashedData,
+  bothData,
 };

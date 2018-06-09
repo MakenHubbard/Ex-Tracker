@@ -1,4 +1,5 @@
 // Dom string function
+const singleOutputDiv = $('.singleExCard');
 const exOutputDiv = $('.exCard');
 const locationOutputDiv = $('.locationCard');
 
@@ -30,26 +31,26 @@ const locationDomString = (stakeouts) => {
   });
 };
 
-const printSingle = (myEx, stakeouts) => {
-  myEx.forEach((ex) => {
-    let singleString = '';
-    singleString += `<div class="jumbotron">`;
-    singleString += `<div class="row">`;
-    singleString += `<div>`;
-    singleString += `<img src="${myEx.image}" alt="" width="240px" height="240px">`;
-    singleString += `<h1>${myEx.name}</h1>`;
-    for (let q = 0; q < stakeouts.length; q++) {
-      singleString += `<p>${stakeouts[q]}</p>`;
-      singleString += `</div>`;
-      singleString += `</div>`;
-      singleString += `</div>`;
-    };
-    singleExDom(singleString);
-  });
+const printSingle = (data) => {
+  let singleString = '';
+  singleString += `<div class="jumbotron">`;
+  singleString += `<div class="row">`;
+  singleString += `<div>`;
+  singleString += `<img src="${data.image}" alt="" width="240px" height="240px">`;
+  singleString += `<h1>${data.name}</h1>`;
+  singleString += `<p>${data.relatedLocations[0].nameOfLocation}</p>`;
+  singleString += `<p>${data.relatedLocations[1].nameOfLocation}</p>`;
+  singleString += `<p>${data.relatedLocations[2].nameOfLocation}</p>`;
+  singleString += `<button id="goBack" type="button" class="btn btn-danger">Go Back</button>`;
+  singleString += `</div>`;
+  singleString += `</div>`;
+  singleString += `</div>`;
+
+  singleExDom(singleString);
 };
 
-const singleExDom = () => {
-  exOutputDiv.html();
+const singleExDom = (singleString) => {
+  singleOutputDiv.append(singleString);
 };
 
 const printExToDom = (exes) => {
@@ -59,10 +60,6 @@ const printExToDom = (exes) => {
 const printLocationToDom = (stakeout) => {
   locationOutputDiv.append(stakeout);
 };
-
-// const printSingleExToDom = () => {
-
-// };
 
 module.exports = {
   exDomString,
