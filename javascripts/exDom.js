@@ -30,25 +30,27 @@ const locationDomString = (stakeouts) => {
   });
 };
 
-// const printSingle = (myEx, stakeouts) => {
-//     for (let k = 0; k < myEx.length; k++) {
-//       let singleString = '';
-//       singleString += `<div class="jumbotron">`;
-//       singleString += `<div class="row">`;
-//       singleString += `<div>`;
-//       singleString += `<img src="${myEx.image}" alt="" width="240px" height="240px">`;
-//       singleString += `<h1>${myEx.name}</h1>`;
-//       singleString += `<p>...</p>`;
-//       singleString += `<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>`;
-//       singleString += `</div>`;
-//       aingelString += `</div>`;
-//       singleString += `</div>`;
-//     }
-// };
+const printSingle = (myEx, stakeouts) => {
+  myEx.forEach((ex) => {
+    let singleString = '';
+    singleString += `<div class="jumbotron">`;
+    singleString += `<div class="row">`;
+    singleString += `<div>`;
+    singleString += `<img src="${myEx.image}" alt="" width="240px" height="240px">`;
+    singleString += `<h1>${myEx.name}</h1>`;
+    for (let q = 0; q < stakeouts.length; q++) {
+      singleString += `<p>${stakeouts[q]}</p>`;
+      singleString += `</div>`;
+      singleString += `</div>`;
+      singleString += `</div>`;
+    };
+    singleExDom(singleString);
+  });
+};
 
-// const singleExDom = () => {
-//   oneExOutputDiv.html();
-// };
+const singleExDom = () => {
+  exOutputDiv.html();
+};
 
 const printExToDom = (exes) => {
   exOutputDiv.append(exes);
@@ -65,4 +67,5 @@ const printLocationToDom = (stakeout) => {
 module.exports = {
   exDomString,
   locationDomString,
+  printSingle,
 };
