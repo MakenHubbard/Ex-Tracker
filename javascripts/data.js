@@ -54,5 +54,4 @@ const initializer = () => {
 module.exports = {
   initializer,
   smashedData,
-  bothData,
 };

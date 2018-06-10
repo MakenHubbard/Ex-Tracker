@@ -9,22 +9,28 @@ const whatTime = (e) => {
   displayTime(time);
 };
 
-const displayLocation = (userRequest) => {
-  const locationArray = [];
-  locationData().then((results) => {
-    results.forEach((result) => {
-      if (userRequest === result.nameOfLocation) {
-        locationArray.push(result);
-      };
+const locationArray = [];
+const displayLocation = () => {
+  $(document).on('click', '#subby', (e) => {
+    console.error('click event',e);
+    locationData().then((results) => {
+      console.error('inside the displayLocation function', results);
+      results.forEach((result) => {
+        const userRequest = $('#userInput').val();
+        if (userRequest === result.nameOfLocation) {
+          locationArray.push(result);
+          console.error('loactionArray', locationArray);
+          $('.exCard').html(exDomString.locationDomString(locationArray));
+        };
+      });
     });
   });
-  $('.exCard').html(exDomString.locationDomString(locationArray));
 };
 
-const userInput = () => {
-  const userRequest = $('#userInput').val();
-  displayLocation(userRequest);
-};
+// const userInput = () => {
+//   const userRequest = $('#userInput').val();
+//   displayLocation(userRequest);
+// };
 
 const displayTime = (time) => {
   const selectedLocate = [];
@@ -63,7 +69,7 @@ const backBtnEvent = (e) => {
 
 const events = () => {
   $('body').on('click', '.times', whatTime);
-  $('#subby').on('click', userInput);
+  displayLocation();
   clickEx();
   backBtnEvent();
 };
