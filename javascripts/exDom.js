@@ -2,6 +2,7 @@
 const singleOutputDiv = $('.singleExCard');
 const exOutputDiv = $('.exCard');
 const locationOutputDiv = $('.locationCard');
+const searchedLocationOutputDiv = $('.searchedLocation');
 
 const exDomString = (myEx) => {
   myEx.forEach((ex) => {
@@ -29,6 +30,19 @@ const locationDomString = (stakeouts) => {
     domStrang += `</div>`;
     printLocationToDom(domStrang);
   });
+};
+
+const printSearchedLocation = (result) => {
+  let domStrang = '';
+  domStrang += `<div class="locates">`;
+  domStrang += `<div class="col-md-4">`;
+  domStrang += `<img src="${result.locationImage}" alt="" width="300px" height="300px">`;
+  domStrang += `<h2>${result.nameOfLocation}</h2>`;
+  domStrang += `<p>${result.locationAddress}</p>`;
+  domStrang += `<p><b>${result.visitingHours}</b></p>`;
+  domStrang += `</div>`;
+  domStrang += `</div>`;
+  printSearchedLocationToDom(domStrang);
 };
 
 const printSingle = (data) => {
@@ -61,8 +75,13 @@ const printLocationToDom = (stakeout) => {
   locationOutputDiv.append(stakeout);
 };
 
+const printSearchedLocationToDom = (result) => {
+  searchedLocationOutputDiv.append(result);
+};
+
 module.exports = {
   exDomString,
   locationDomString,
   printSingle,
+  printSearchedLocation,
 };

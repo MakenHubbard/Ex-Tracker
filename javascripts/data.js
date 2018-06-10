@@ -19,10 +19,10 @@ const bothData = () => {
 const smashedData = () => {
   return loadLocations()
     .then((locals) => {
-      dom.locationDomString(locals);
+      // dom.locationDomString(locals);
       return loadEx()
         .then((exes) => {
-          dom.exDomString(exes);
+          // dom.exDomString(exes);
           const exPlusLocations = dataSmash(exes, locals);
           return Promise.resolve(exPlusLocations);
         });

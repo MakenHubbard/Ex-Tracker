@@ -9,18 +9,15 @@ const whatTime = (e) => {
   displayTime(time);
 };
 
-const locationArray = [];
 const displayLocation = () => {
   $(document).on('click', '#subby', (e) => {
-    console.error('click event',e);
     locationData().then((results) => {
-      console.error('inside the displayLocation function', results);
       results.forEach((result) => {
         const userRequest = $('#userInput').val();
         if (userRequest === result.nameOfLocation) {
-          locationArray.push(result);
-          console.error('loactionArray', locationArray);
-          $('.exCard').html(exDomString.locationDomString(locationArray));
+          $('.exCard').addClass('hide');
+          $('.locationCard').addClass('hide');
+          $('.searchedLocation').html(exDomString.printSearchedLocation(result));
         };
       });
     });
@@ -59,7 +56,7 @@ const clickEx = () => {
   });
 };
 
-const backBtnEvent = (e) => {
+const backFromSingleExBtnEvent = (e) => {
   $(document).on('click', '#goBack', (e) => {
     $('.locationCard').removeClass('hide');
     $('.exCard').removeClass('hide');
@@ -71,7 +68,7 @@ const events = () => {
   $('body').on('click', '.times', whatTime);
   displayLocation();
   clickEx();
-  backBtnEvent();
+  backFromSingleExBtnEvent();
 };
 
 module.exports = events;
