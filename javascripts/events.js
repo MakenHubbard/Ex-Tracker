@@ -1,6 +1,8 @@
 // put events on the buttons
 const data = require('./data');
 const exDomString = require('./exDom');
+const locationData = require('./locations');
+// const exData = require('./ex');
 
 const whatTime = (e) => {
   const time = e.target.innerHTML;
@@ -9,14 +11,14 @@ const whatTime = (e) => {
 
 const displayLocation = (userRequest) => {
   const locationArray = [];
-  data.bothData().then((locals) => {
-    locals.forEach((location) => {
-      if (userRequest === location.nameOfLocation) {
-        locationArray.push(location);
+  locationData().then((results) => {
+    results.forEach((result) => {
+      if (userRequest === result.nameOfLocation) {
+        locationArray.push(result);
       };
     });
   });
-  $('.exCard').html(exDomString(data.getEx(), locationArray));
+  $('.exCard').html(exDomString.locationDomString(locationArray));
 };
 
 const userInput = () => {
@@ -26,14 +28,14 @@ const userInput = () => {
 
 const displayTime = (time) => {
   const selectedLocate = [];
-  data.bothData().then((locals) => {
-    locals.forEach((location) => {
-      if (location.visitingHours === time) {
-        selectedLocate.push(location);
+  locationData().then((results) => {
+    results.forEach((result) => {
+      if (result.visitingHours === time) {
+        selectedLocate.push(result);
       }
     });
   });
-  $('.exCard').html(exDomString(data.bothData(), selectedLocate));
+  $('.exCard').html(exDomString.locationDomString(selectedLocate));
 };
 
 const clickEx = () => {
