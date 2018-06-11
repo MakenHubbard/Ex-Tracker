@@ -41,3 +41,7 @@ p {
 .locates {
   margin-top: 37px;
 }
+
+.jumbotron {
+  background-color: grey;
+}

@@ -44,6 +44,7 @@ const dataSmash = (exes, locals) => {
     };
     allData.push(finalEx);
   });
+  console.log(allData);
   return allData;
 };
 

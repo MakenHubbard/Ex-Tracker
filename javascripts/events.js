@@ -69,6 +69,9 @@ const events = () => {
   displayLocation();
   clickEx();
   backFromSingleExBtnEvent();
+
 };
 
-module.exports = events;
+module.exports = {
+  events,
+};

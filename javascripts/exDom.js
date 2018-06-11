@@ -8,7 +8,7 @@ const exDomString = (myEx) => {
   myEx.forEach((ex) => {
     let domString = '';
     domString += `<div class="exes text-center" id="${ex.name}">`;
-    domString += `<img src="${ex.image}" alt="" width="240px" height="240px">`;
+    domString += `<img class="exImg" src="${ex.image}" alt="" width="240px" height="240px">`;
     domString += `<h1>${ex.name}</h1>`;
     domString += `<p>${ex.age}</p>`;
     domString += `<p><b>Reasons why she is my ex: </b>${ex.flaws}</p>`;
