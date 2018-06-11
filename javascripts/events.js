@@ -4,11 +4,6 @@ const exDomString = require('./exDom');
 const locationData = require('./locations');
 // const exData = require('./ex');
 
-const whatTime = (e) => {
-  const time = e.target.innerHTML;
-  displayTime(time);
-};
-
 const displayLocation = () => {
   $(document).on('click', '#subby', (e) => {
     locationData().then((results) => {
@@ -30,15 +25,21 @@ const displayLocation = () => {
 // };
 
 const displayTime = (time) => {
-  const selectedLocate = [];
-  locationData().then((results) => {
-    results.forEach((result) => {
-      if (result.visitingHours === time) {
-        selectedLocate.push(result);
-      }
+  $(document).on('click', '.times', (e) => {
+    const time = e.target.innerHTML;
+    const selectedLocate = [];
+    locationData().then((results) => {
+      console.error(results);
+      results.forEach((result) => {
+        if (result.visitingHours === time) {
+          selectedLocate.push(result);
+          $('.locationCard').addClass('hide');
+          $('.exCard').addClass('hide');
+          $('.timeDisplayCard').html(exDomString.printTimes(selectedLocate));
+        }
+      });
     });
   });
-  $('.exCard').html(exDomString.locationDomString(selectedLocate));
 };
 
 const clickEx = () => {
@@ -58,18 +59,15 @@ const clickEx = () => {
 
 const backFromSingleExBtnEvent = (e) => {
   $(document).on('click', '#goBack', (e) => {
-    $('.locationCard').removeClass('hide');
-    $('.exCard').removeClass('hide');
-    $('.singleExCard').addClass('hide');
+    window.location.reload();
   });
 };
 
 const events = () => {
-  $('body').on('click', '.times', whatTime);
   displayLocation();
   clickEx();
   backFromSingleExBtnEvent();
-
+  displayTime();
 };
 
 module.exports = {
