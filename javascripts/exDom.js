@@ -1,6 +1,8 @@
 // Dom string function
+const singleOutputDiv = $('.singleExCard');
 const exOutputDiv = $('.exCard');
 const locationOutputDiv = $('.locationCard');
+const searchedLocationOutputDiv = $('.searchedLocation');
 
 const exDomString = (myEx) => {
   myEx.forEach((ex) => {
@@ -30,29 +32,39 @@ const locationDomString = (stakeouts) => {
   });
 };
 
-const printSingle = (myEx) => {
-  console.log(myEx);
+const printSearchedLocation = (result) => {
+  let domStrang = '';
+  domStrang += `<div class="locates">`;
+  domStrang += `<div class="col-md-4">`;
+  domStrang += `<img src="${result.locationImage}" alt="" width="300px" height="300px">`;
+  domStrang += `<h2>${result.nameOfLocation}</h2>`;
+  domStrang += `<p>${result.locationAddress}</p>`;
+  domStrang += `<p><b>${result.visitingHours}</b></p>`;
+  domStrang += `</div>`;
+  domStrang += `</div>`;
+  printSearchedLocationToDom(domStrang);
+};
+
+const printSingle = (data) => {
   let singleString = '';
-  for (let k = 0; k < myEx.length; k++) {
-    singleString += `<div class="jumbotron">`;
-    singleString += `<div class="row">`;
-    singleString += `<div class="text-center">`;
-    singleString += `<img  src="${myEx.image}" alt="" width="240px" height="240px">`;
-    singleString += `<h1>${myEx.name}</h1>`;
-    singleString += `<div col-sm-3 col-sm-offset-4>`;
-    singleString += `<p>${myEx.relatedLocations[0]}</p>`;
-    singleString += `<p>`;
-    singleString += `</div>`;
-    singleString += `<p><a id="singleBack-btn" class="btn btn-primary btn-lg" href="#" role="button">Go Back</a></p>`;
-    singleString += `</div>`;
-    singleString += `</div>`;
-    singleString += `</div>`;
-  }
+  singleString += `<div class="jumbotron">`;
+  singleString += `<div class="row">`;
+  singleString += `<div>`;
+  singleString += `<img src="${data.image}" alt="" width="240px" height="240px">`;
+  singleString += `<h1>${data.name}</h1>`;
+  singleString += `<p>${data.relatedLocations[0].nameOfLocation}</p>`;
+  singleString += `<p>${data.relatedLocations[1].nameOfLocation}</p>`;
+  singleString += `<p>${data.relatedLocations[2].nameOfLocation}</p>`;
+  singleString += `<button id="goBack" type="button" class="btn btn-danger">Go Back</button>`;
+  singleString += `</div>`;
+  singleString += `</div>`;
+  singleString += `</div>`;
+
   singleExDom(singleString);
 };
 
 const singleExDom = (singleString) => {
-  exOutputDiv.html(singleString);
+  singleOutputDiv.append(singleString);
 };
 
 const printExToDom = (exes) => {
@@ -63,12 +75,13 @@ const printLocationToDom = (stakeout) => {
   locationOutputDiv.append(stakeout);
 };
 
-// const printSingleExToDom = () => {
-
-// };
+const printSearchedLocationToDom = (result) => {
+  searchedLocationOutputDiv.append(result);
+};
 
 module.exports = {
   exDomString,
   locationDomString,
   printSingle,
+  printSearchedLocation,
 };
