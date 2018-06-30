@@ -11,14 +11,6 @@ body {
   float: right;
 }
 
-.morning-butt {
-  float: left;
-}
-
-.evening-butt {
-  float:right;
-}
-
 .times {
   margin-top: 50px;
   align-self: center;
@@ -44,4 +36,8 @@ p {
 
 .jumbotron {
   background-color: grey;
+}
+
+#allLocations {
+  padding-top: 50px;
 }

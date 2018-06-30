@@ -10,7 +10,7 @@
     crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Skranji" rel="stylesheet">
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="./styles/main.css">
 </head>
 
 <body class="container">
@@ -23,17 +23,19 @@
         <button id="subby" class="btn btn-default">Submit</button>
       </div>
     </div>
-    <div class="morning-butt">
-      <button type="button" class="btn btn-primary times">Morning</button>
-    </div>
-    <div class="afternoon=butt">
-      <button type="button" class="btn btn-success times">Afternoon</button>
-    </div>
-    <div class="evening-butt">
-      <button type="button" class="btn btn-warning times">Evening</button>
-    </div>
-    <div class="AfterDark-butt">
-      <button type="button" class="btn btn-danger times">After Dark</button>
+    <div class="row">
+      <div class="col-xs-2 morning-butt">
+        <button type="button" class="btn btn-primary times">Morning</button>
+      </div>
+      <div class="col-xs-2 afternoon=butt">
+        <button type="button" class="btn btn-success times">Afternoon</button>
+      </div>
+      <div class="col-xs-2 evening-butt">
+        <button type="button" class="btn btn-warning times">Evening</button>
+      </div>
+      <div class="col-xs-2 AfterDark-butt">
+        <button type="button" class="btn btn-danger times">After Dark</button>
+      </div>
     </div>
   </div>
   <div class="show-content">

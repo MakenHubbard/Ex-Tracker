@@ -66,9 +66,10 @@ const printSingle = (data) => {
 
 const printTimes = (times) => {
   let timeStrang = '';
+  timeStrang += `<div class="locates">`;
+  timeStrang += `<button id="backButtForTimes" class="col-xs-12 btn btn-danger text-center">Go Back</button>`;
   times.forEach((time) => {
-    timeStrang += `<div class="locates">`;
-    timeStrang += `<div class="col-md-4">`;
+    timeStrang += `<div id="allLocations" class="col-md-4">`;
     timeStrang += `<img src="${time.locationImage}" alt="" width="300px" height="300px">`;
     timeStrang += `<h2>${time.nameOfLocation}</h2>`;
     timeStrang += `<p>${time.locationAddress}</p>`;

@@ -29,7 +29,6 @@ const displayTime = (time) => {
     const time = e.target.innerHTML;
     const selectedLocate = [];
     locationData().then((results) => {
-      console.error(results);
       results.forEach((result) => {
         if (result.visitingHours === time) {
           selectedLocate.push(result);
@@ -57,8 +56,14 @@ const clickEx = () => {
   });
 };
 
-const backFromSingleExBtnEvent = (e) => {
-  $(document).on('click', '#goBack', (e) => {
+const backFromSingleExBtnEvent = () => {
+  $(document).on('click', '#goBack', () => {
+    window.location.reload();
+  });
+};
+
+const backFromTimesDisplay = () => {
+  $(document).on('click', '#backButtForTimes', () => {
     window.location.reload();
   });
 };
@@ -68,6 +73,7 @@ const events = () => {
   clickEx();
   backFromSingleExBtnEvent();
   displayTime();
+  backFromTimesDisplay();
 };
 
 module.exports = {
